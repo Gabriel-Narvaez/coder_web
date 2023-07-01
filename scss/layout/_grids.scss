@@ -1,0 +1,61 @@
+
+.grid_container {
+    width: 100%;
+    max-width: fit-content;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-areas:
+        "encabezado"
+        "title"
+        "article1"
+        "article2"
+        "sidebar"
+        "publicidad"
+        "footer"
+}
+
+header {
+    grid-area: encabezado;
+}
+
+.title {
+    grid-area: title;
+}
+
+.article1 {
+    grid-area: article1;
+}
+
+.article2 {
+    grid-area: article2;
+}
+
+aside {
+    grid-area: sidebar;
+}
+
+.publicidad {
+    grid-area: publicidad;
+}
+
+footer {
+    grid-area: footer;
+}
+
+@media (min-width: $tablet) {
+    .grid_container {
+        text-align: center;
+        max-width: fit-content;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 34% 33% 33%;
+        grid-template-areas:
+            "encabezado encabezado encabezado"
+            "title title title"
+            "article1 article2 sidebar"
+            "publicidad publicidad publicidad"
+            "footer footer footer"
+    }
+}
+
